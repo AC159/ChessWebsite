@@ -1,0 +1,30 @@
+{% extends "Website(chessboard)3.0.html" %}
+<html lang="en">
+
+{% block head %}
+    {{ super() }}
+    <style>
+        .about{
+             position: absolute;
+            left: 50px;
+            right: 30px;
+            top: 60px;
+            }
+    body{
+        background-image: none;
+    }
+
+    </style>
+{% endblock %}
+
+{% block body %}
+<div class="about">
+    <h2>About OnlyChess</h2>
+<p>ChessNation came to life as a project for a Web Programming class at Concordia University Software engineering program. This website is meant for chess fanatics
+to come together and enjoy playing games against each other and have some fun while playing one of the oldest games known to Mankind.</p>
+</div>
+     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+{% endblock %}
+</html>

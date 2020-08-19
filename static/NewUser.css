@@ -1,0 +1,16 @@
+body{
+        background-image: none;
+    }
+
+form{
+    margin-top: 70px;
+}
+#sign-in{
+    width: 177px;
+}
+form{
+    top: 60px;
+}
+#register{
+    margin-bottom: 20px;
+}

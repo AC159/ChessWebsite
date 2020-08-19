@@ -1,0 +1,76 @@
+{% extends "Website(chessboard)3.0.html" %}
+<html lang="en">
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" type="text/css" href="../static/History.css">
+    <style>body{
+        background-image: none;
+    }</style>
+{% endblock %}
+
+{% block body %}
+<div class="sidebar">
+<a href="#history">History</a>
+<a href="#turk">The Turk</a>
+<a></a>
+<a></a>
+<a></a>
+</div>
+
+<div class="main-contents">
+<h2 id="history">History</h2>
+    <h3>The pre-computer age</h3>
+<p>The idea of creating a chess-playing machine dates back to the eighteenth century. Around 1769, the chess playing automaton called The Turk, became famous
+    before being exposed as a hoax. Before the development of digital computing, serious trials based on automata such as El Ajedrecista of 1912 which played a
+    king and rook versus king ending, were too complex and limited to be useful for playing full games of chess. The field of mechanical chess research languished
+    until the advent of the digital computer in the 1950s.</p>
+    <h3>Early software age: selective search</h3>
+<p>Since then, chess enthusiasts and computer engineers have built, with increasing degrees of seriousness and success, chess-playing machines and computer
+    programs. One of the few chess grandmasters to devote himself seriously to computer chess was former World Chess Champion Mikhail Botvinnik, who wrote
+    several works on the subject. He also held a doctorate in electrical engineering. Working with relatively primitive hardware available in the Soviet Union
+    in the early 1960s, Botvinnik had no choice but to investigate software move selection techniques; at the time only the most powerful computers could achieve
+    much beyond a three-ply full-width search, and Botvinnik had no such machines. In 1965 Botvinnik was a consultant to the ITEP team in a US-Soviet computer
+    chess match (see Kotok-McCarthy).</p>
+    <h3>The later software age: full-width search</h3>
+<p>One developmental milestone occurred when the team from Northwestern University, which was responsible for the Chess series of programs and won the first
+    three ACM Computer Chess Championships (1970–72), abandoned type B searching in 1973. The resulting program, Chess 4.0, won that year's championship and
+    its successors went on to come in second in both the 1974 ACM Championship and that year's inaugural World Computer Chess Championship, before winning
+    the ACM Championship again in 1975, 1976 and 1977. The type A implementation turned out to be just as fast: in the time it used to take to decide which
+    moves were worthy of being searched, it was possible just to search all of them. In fact, Chess 4.0 set the paradigm that was and still is followed essentially
+    by all modern Chess programs today.</p>
+    <h2 id="turk">The Turk</h2>
+<p>The Turk, also known as Automaton Chess Player, was a fake chess-playing machine constructed in the late 18th century. From 1770 until its destruction by fire
+    in 1854 it was exhibited by various owners as an automaton, though it was eventually revealed to be an elaborate hoax. Constructed and unveiled in 1770 by
+    Wolfgang von Kempelen to impress the Empress Maria Theresa of Austria, the mechanism appeared to be able to play a
+    strong game of chess against a human opponent, as well as perform the knight's tour, a puzzle that requires the player to move a knight to occupy every
+    square of a chessboard exactly once.</p>
+    <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Tuerkischer_schachspieler_windisch4.jpg/330px-Tuerkischer_schachspieler_windisch4.jpg"
+         alt="...">
+        <figcaption>A copper engraving of the Turk, showing the open cabinets and working parts.
+            A ruler at bottom right provides scale.</figcaption>
+    </figure>
+    <p></p>
+<p>The Turk was in fact a mechanical illusion that allowed a human chess master hiding inside to operate the machine. With a skilled operator, the Turk won
+    most of the games played during its demonstrations around Europe and the Americas for nearly 84 years, playing and defeating many challengers including
+    statesmen such as Napoleon Bonaparte and Benjamin Franklin. The device was later purchased in 1804 and exhibited by Johann Nepomuk Mälzel. The chess masters
+    who secretly operated it included Johann Allgaier, Boncourt, Aaron Alexandre, William Lewis, Jacques Mouret, and William Schlumberger, but the operators within
+    the mechanism during Kempelen's original tour remain a mystery.</p>
+<p>The Turk made its debut in 1770 at Schönbrunn Palace, about six months after Pelletier's act. Kempelen addressed the court, presenting what he had built,
+    and began the demonstration of the machine and its parts. With every showing of the Turk, Kempelen began by opening the doors and drawers of the cabinet,
+    allowing members of the audience to inspect the machine. Following this display, Kempelen would announce that the machine was ready for a challenger.</p>
+<p>Kempelen would inform the player that the Turk would use the white pieces and have the first move. Between moves the Turk kept its left arm on the cushion.
+    The Turk could nod twice if it threatened its opponent's queen, and three times upon placing the king in check. If an opponent made an illegal move,
+    the Turk would shake its head, move the piece back and make its own move, thus forcing a forfeit of its opponent's move. Louis Dutens, a traveller
+    who observed a showing of the Turk, attempted to trick the machine "by giving the Queen the move of a Knight, but my mechanic opponent was not to be so imposed
+    upon; he took up my Queen and replaced her in the square from which I had moved her". Kempelen made it a point to traverse the room during the match, and
+    invited observers to bring magnets, irons, and lodestones to the cabinet to test whether the machine was run by a form of magnetism or weights. The first
+    person to play against the Turk was Count Ludwig von Cobenzl, an Austrian courtier at the palace. Along with other challengers that day, he was quickly
+    defeated, with observers of the match stating that the machine played aggressively, and typically beat its opponents within thirty minutes.</p>
+</div>
+     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+{% endblock %}
+</html>

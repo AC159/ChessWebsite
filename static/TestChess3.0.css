@@ -1,0 +1,42 @@
+.white {
+  background-color: wheat;
+}
+.black {
+background-color: burlywood;
+}
+td.square {
+  width: 60px;
+  height: 60px;
+  font-size: 40px;
+  padding: 0!important;
+  text-align: center;
+  font-family: "arial", sans-serif !important;
+}
+#board {
+  border: 2px solid saddlebrown;
+  padding: 15px;
+  margin: 70px auto 30px;
+  border-spacing: 0!important;
+}
+#board-caption{
+  color: black!important;
+  caption-side: top;
+  text-align: center;
+  padding-top: 0;
+}
+#dropdownMenuButton{
+    position: relative;
+    height: 40px;
+    width: 130px;
+    font-size: medium;
+    top: 90px;
+    display: flow-root!important;
+}
+.btn{
+    background-color: darkgrey;
+    color: white;
+    border-radius: 5px;
+}
+body{
+    background-image: none;
+    }

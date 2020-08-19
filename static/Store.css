@@ -1,0 +1,36 @@
+.store_image{
+  height: 200px;
+  width: 241px;
+}
+#logo{
+  height: 30px;
+  width: 30px;
+}
+.carousel{
+  height: 370px;
+  width: 100%;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+.carousel-item img{
+  height: 370px;
+  width: auto!important;
+  margin: 0 auto;
+}
+.card-deck{
+  margin: 40px 40px;
+}
+.card{
+  background-color: #e6e6e6;
+}
+.card img{
+  height: 320px;
+  width: auto;
+}
+.btn{
+  margin-left: 0;
+}
+body{
+        background-image: none;
+    }

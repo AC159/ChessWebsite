@@ -1,0 +1,52 @@
+{% extends "Website(chessboard)3.0.html" %}
+<html lang="en">
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" type="text/css" href="../static/HomePage.css">
+{% endblock %}
+
+
+{% block body %}
+
+    <div class="container col-lg-12 flex-container">
+
+        <div class="row">
+
+            {{ table }}
+
+            <iframe src="https://lichess.org/training/frame?theme=brown&bg=light" allowtransparency="true" frameborder="0" id="puzzle"></iframe>
+
+            <iframe src="https://lichess.org/tv/frame?theme=brown&bg=light" allowtransparency="true" id="live" frameborder="0"></iframe>
+
+        </div>
+    </div>
+    <div class="container col-12 studies">
+        <h2>Studies</h2>
+        <div class="row">
+            <div class="col">
+                <iframe  src="https://lichess.org/study/embed/wXsahXlw/mLbbjctR#0" frameborder=0
+                        id="benoni-classics"></iframe>
+            </div>
+            <div class="col">
+                <iframe src="https://lichess.org/study/embed/0GQTK76J/pDJnwqv6#0" frameborder=0
+                        id="openings"></iframe>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <iframe src="https://lichess.org/study/embed/T0QkAX4S/PrZdp87g#0"
+                        frameborder=0></iframe>
+            </div>
+            <div class="col">
+                <iframe  src="https://lichess.org/study/embed/LJTqRudR/iKlwEQbP#0"
+                        frameborder=0></iframe>
+            </div>
+        </div>
+    </div>
+     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+{% endblock %}
+
+</html>

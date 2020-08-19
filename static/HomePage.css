@@ -1,0 +1,53 @@
+
+        #puzzle {
+            margin: 20px 0;
+            position: relative;
+            width: 350px;
+            height: 350px;
+            display: inline-block;
+            left: 10px;
+        }
+        #live{
+            margin: 20px 0;
+            width: 350px;
+            height: 350px;
+            position: relative;
+            right: 10px;
+            display: inline-block;
+        }
+        .flex-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            top: 100px;
+        }
+        .studies {
+            position: relative;
+            margin: auto;
+            top: 200px;
+        }
+        .studies iframe{
+             width: 600px;
+            height: 371px;
+        }
+
+
+        .row {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #table {
+            margin: 20px auto;
+            width: 500px;
+            position: relative;
+        }
+
+        caption {
+            text-align: center;
+            caption-side: top;
+        }
+    body{
+        background-image: none;
+    }
+

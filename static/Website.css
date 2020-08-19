@@ -1,0 +1,68 @@
+
+body{
+     background-image: url('https://d.newsweek.com/en/full/55197/bobby-fisher-om04-wide.jpg');
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover!important;
+    background-color: #e6e6e6;
+}
+#logo{
+    margin-right: 10px;
+}
+#navbar{
+    margin-bottom: 0;
+}
+.main-section{
+    margin-top: 90px;
+    padding: 0;
+}
+.modal-content{
+    background-color: #e6e6e6;
+    opacity: 0.90;
+    padding: 0 18px;
+    box-shadow: 0 0 3px #848484;
+}
+.user-img{
+    margin-top: -15px;
+    margin-bottom: 35px;
+}
+.user-img img{
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+}
+.form-group{
+    margin-bottom: 25px;
+}
+.form-group input{
+    height: 42px;
+    border-radius: 5px;
+    border: 0;
+    font-size: 18px;
+}
+#new-user{
+    width: 177px;
+}
+button{
+    width: 40%;
+    margin: 10px 25px;
+}
+.btn{
+    background-color: darkgrey;
+    color: white;
+    border-radius: 5px;
+}
+.forgot1{
+    padding: 10px 0;
+}
+.forgot2{
+    padding: 0 0 10px;
+}
+#user-link{
+    color: #3399ff;
+}
+#user-link:hover{
+    color: #e6e6e6;
+}
