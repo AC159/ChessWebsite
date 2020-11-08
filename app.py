@@ -9,9 +9,12 @@ from forms import RegistrationForm, LoginForm, ForgotPasswordForm, NewPasswordFo
 from flask_login import LoginManager, UserMixin, login_user, login_required, current_user, logout_user
 from flask_mail import Message, Mail
 from Top_Players import TopPlayers, CreateTable, CreateTableItems
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'inmyf69y3p3v9q8yrctnuv5yp938tusi;htvpw'
+app.config['SECRET_KEY'] = os.getenv("APP_SECRET_KEY")
 login_manager = LoginManager()
 login_manager.login_view = '/login'
 app.config['USE_SESSION_FOR_NEXT'] = True
@@ -20,9 +23,9 @@ app.config.update(
     MAIL_SERVER='smtp.gmail.com',
     MAIL_PORT=587,
     MAIL_USE_TLS=True,
-    MAIL_USERNAME='chessnation748@gmail.com',
-    MAIL_DEFAULT_SENDER='chessnation748@gmail.com',
-    MAIL_PASSWORD=os.environ['MAIL_PASSWORD']
+    MAIL_USERNAME=os.getenv("MAIL"),
+    MAIL_DEFAULT_SENDER=os.getenv("MAIL"),
+    MAIL_PASSWORD=os.getenv('MAIL_PASSWORD')
 )
 mail = Mail(app)
 # Initializing a JWS object with the secret key and an expiration time:
@@ -34,6 +37,7 @@ s = TimedJSONWebSignatureSerializer(app.config['SECRET_KEY'], salt='forgot-passw
 
 @app.route('/')
 def home():
+    # todo: integrate a database for users & their ratings
     contents = TopPlayers.top_10_players()
     count = 1
     items = []
@@ -42,17 +46,6 @@ def home():
         if count == 10:
             break
         count += 1
-
-    # items = [CreateTableItems(ranking=1, username=contents[0]["Username"], rating=contents[0]["Rating"]),
-    #         CreateTableItems(ranking=2, username=contents[1]["Username"], rating=contents[1]["Rating"]),
-    #        CreateTableItems(ranking=3, username=contents[2]["Username"], rating=contents[2]["Rating"]),
-    #       CreateTableItems(ranking=4, username=contents[3]["Username"], rating=contents[3]["Rating"]),
-    #      CreateTableItems(ranking=5, username=contents[4]["Username"], rating=contents[4]["Rating"]),
-    #     CreateTableItems(ranking=6, username=contents[5]["Username"], rating=contents[5]["Rating"]),
-    #    CreateTableItems(ranking=7, username=contents[6]["Username"], rating=contents[6]["Rating"]),
-    #    CreateTableItems(ranking=8, username=contents[7]["Username"], rating=contents[7]["Rating"]),
-    #   CreateTableItems(ranking=9, username=contents[8]["Username"], rating=contents[8]["Rating"]),
-    #  CreateTableItems(ranking=10, username=contents[9]["Username"], rating=contents[9]["Rating"])]
 
     table = CreateTable(items)
     return render_template("HomePageChess.html", table=table)

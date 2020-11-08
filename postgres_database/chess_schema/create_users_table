@@ -1,0 +1,10 @@
+create table chess.users (
+
+    user_id int GENERATED ALWAYS AS IDENTITY (START WITH 1),
+    username varchar not null,
+    email varchar(100) not null,
+    rating int default 1250 not null,
+    password varchar not null,
+    primary key (username)
+
+);
