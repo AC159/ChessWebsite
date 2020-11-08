@@ -1,21 +1,27 @@
 from flask_table import Table, Col
 import csv
 import os
+from postgres_database.utils import connection_settings as cs
+import pandas as pd
 
 
 class TopPlayers:
     @staticmethod
     def top_10_players():  # This function returns a list with the 10 best players that are registered on the website.
-        list_players_ratings = []  # We will store the username and ratings of the top ten players
-        with open(os.getcwd() + "/users.csv", "r", newline='') as file:
-            reader = csv.reader(file)
-            for line in reader:
-                # Adding the Username-rating pair as a dictionary to the list
 
-                list_players_ratings.append({"Username": line[0], "Rating": line[2]})
+        conn = cs.get_conn()
+        df = pd.read_sql_query("select username, rating from chess.users order by rating desc limit 10;", conn)
+        data_list = list()
 
-        # Return the sorted list of dictionaries in descending order by the rating:
-        data_list = sorted(list_players_ratings, key=lambda i: int(i['Rating']), reverse=True)
+        count = 0
+        for row in df.iterrows():
+            data_list.append(
+                {
+                    "Username": df.loc[count]['username'],
+                    "Rating": df.loc[count]['rating']
+                 })
+            count += 1
+
         return data_list
 
 
