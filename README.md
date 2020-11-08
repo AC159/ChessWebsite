@@ -2,6 +2,9 @@
 
 1) Create a .env file at the root of the project with these variables:
 
+        FLASK_APP=ChessWebsite
+        FLASK_ENV=development
+
         APP_SECRET_KEY=<some string>
         
         DATABASE_URL=postgres://postgres:postgres@localhost:5432/dbname
