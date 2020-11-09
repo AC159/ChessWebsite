@@ -1,0 +1,59 @@
+{% extends "Website(chessboard)3.0.html" %}
+<html lang="en">
+
+{% block head %}
+
+   {{ super() }}
+
+    <link rel="stylesheet" href="../static/chessboardjs/css/chessboard-1.0.0.css">
+    <link href="../static/chessboardjs/img/">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../static/chessboardjs/js/chessboard-1.0.0.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../static/chessboardJS.css">
+
+{% endblock %}
+
+{% block body %}
+
+    <div id="wrapper">
+
+        <div id="buttons">
+            <button id="startBtn">Start Position</button>
+            <button id="clearBtn">Clear Board</button>
+        </div>
+
+        <div id="board"></div>
+
+    </div>
+
+    <script type="text/javascript">
+
+        const board = Chessboard('board', {
+          position: 'start',
+          draggable: true,
+          dropOffBoard: 'snapback',
+          sparePieces: true,
+            // Set the path to the img folder for chess pieces...what a headache!
+          pieceTheme: 'static/chessboardjs/img/chesspieces/wikipedia/{piece}.png'
+        })
+
+        startBtn = document.querySelector('#startBtn')
+        startBtn.addEventListener('click', () => {
+            board.start()
+        })
+
+        clearBtn = document.querySelector('#clearBtn')
+        clearBtn.addEventListener('click', () => {
+            board.clear()
+        })
+
+
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+{% endblock %}
+</html>

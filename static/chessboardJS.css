@@ -1,0 +1,23 @@
+
+body{
+  background-image: none;
+  overflow: hidden;
+}
+
+#wrapper{
+    top: 50%;
+    margin: 5%;
+    overflow: hidden;
+}
+
+#buttons {
+    position: relative;
+    float: left;
+}
+
+#board{
+    top: 90px;
+    height: 40%;
+    width: 35%;
+    margin: auto;
+}

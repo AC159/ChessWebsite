@@ -90,6 +90,11 @@ def api():
     return render_template("APIPlay.html")
 
 
+@app.route('/chessboardjs')
+def chessboard_js():
+    return render_template("chessboardjs.html")
+
+
 @app.route('/NewUser')
 def new_user():
     return render_template("New_User.html")
